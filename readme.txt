@@ -23,6 +23,7 @@ DevSpace{
             configure the .env file 
             configure mongoose and start the server
             link and configure ./controllers/auth.js 
+            go to routes/auth.js and configure other routes
         }
         MIDDLEWARE = functions that run in between requests
     }
@@ -40,6 +41,13 @@ DevSpace{
                     else send back the err message
                 }
             }
+        }
+    }
+
+    routes{
+        auth.js{
+            import {login} from controllers/auth.js
+            export router at /login address;
         }
     }
 }
