@@ -8,6 +8,8 @@ import multer from 'multer';
 import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import authRoutes from './routes/auth.js';
+import { register } from './controllers/auth.js';
 
 
 /*  CONFIGURATIONS  */ 
@@ -39,8 +41,13 @@ const storage = multer.diskStorage({
 const upload = multer({ storage }); // variable to save the files
 
 
+/*  ROUTES WITH FILES   */
+app.post("/auth/register", upload.single("picture"), register); //routes to auth and middleware uploads the media. register function(controller) is carried out at last
+/*  ROUTES  */
+app.use("/auth", authRoutes)
+
 /*  MONGOOSE SETUP  */
-const PORT = process.env.PORT || 6001;
+const PORT = process.env.PORT || 6001; //6001 will work when the port is busy
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -49,3 +56,5 @@ mongoose.connect(process.env.MONGO_URL, {
 }).catch(err => console.error(`${err} did not connect`));
 
 
+// Authentication - authenticate and log in
+// Authorization - make sure the user is logged in
