@@ -19,12 +19,27 @@ DevSpace{
         package.json { add "type" : "module" }
         index.js { 
             import all the modules
-            connect mongoDB database and configure mongoose
+            connect mongoDB database
             configure the .env file 
+            configure mongoose and start the server
+            link and configure ./controllers/auth.js 
         }
-
         MIDDLEWARE = functions that run in between requests
+    }
 
-
+    controllers{
+        auth.js{
+            import bcrypt, jwt, and User from models
+            export register as async function {
+                try catch block{
+                    destructure the request
+                    hash the password
+                    make a newUser with the hashed password
+                    const savedUser = await newUser.save();
+                    send back the user if created
+                    else send back the err message
+                }
+            }
+        }
     }
 }
