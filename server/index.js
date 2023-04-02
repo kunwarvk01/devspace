@@ -9,6 +9,7 @@ import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+
 /*  CONFIGURATIONS  */ 
 // only needed when you use "type" module
 const __filename = fileURLToPath(import.meta.url);
@@ -25,6 +26,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended:true }));
 app.use(cors);
 app.use("/assets", express.static(path.join(__dirname, 'public/assets'))); // sets directory to store data locally 
 
+
 /*  FILE STORAGE */ 
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
@@ -35,5 +37,15 @@ const storage = multer.diskStorage({
     }
 }); //saves the files in the specified directory
 const upload = multer({ storage }); // variable to save the files
+
+
+/*  MONGOOSE SETUP  */
+const PORT = process.env.PORT || 6001;
+mongoose.connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(()=>{
+    app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+}).catch(err => console.error(`${err} did not connect`));
 
 

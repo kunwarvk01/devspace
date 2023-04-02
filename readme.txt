@@ -17,8 +17,14 @@ DevSpace{
         npm init -y [initializes a new project and adds metadata and dependencies]
 
         package.json { add "type" : "module" }
-        index.js { import all the modules }
+        index.js { 
+            import all the modules
+            connect mongoDB database and configure mongoose
+            configure the .env file 
+        }
 
         MIDDLEWARE = functions that run in between requests
+
+
     }
 }
