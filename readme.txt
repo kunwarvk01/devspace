@@ -42,12 +42,30 @@ DevSpace{
                 }
             }
         }
+        users.js{
+            import User model
+            export functions - getUser, getUserConnections, addRemoveConnection
+            running the try catch block with the functionalities
+        }
     }
 
     routes{
         auth.js{
             import {login} from controllers/auth.js
-            export router at /login address;
+            export default router at /login address;
+        }
+        users.js{
+            import { getUser, getUserConnections, addRemoveConnection } from '../controllers/users.js';
+            read and update getuser, getUserConnections, addRemoveConnection using router.get and router.patch;
+            export default router
+        }
+    }
+
+    middleware{
+        auth.js{
+            verifytoken function is used to very the req token
+            checks if the token is valid or not.
+            adds the result to the user object.
         }
     }
 }
