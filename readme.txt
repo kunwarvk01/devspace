@@ -62,7 +62,7 @@ DevSpace{
     }
 
     middleware{
-        auth.js{
+        auth.jsreadme.txt{
             verifytoken function is used to very the req token
             checks if the token is valid or not.
             adds the result to the user object.
