@@ -14,6 +14,9 @@ import postRoutes from './routes/posts.js'
 import { register } from './controllers/auth.js';
 import { createPost } from './controllers/posts.js'
 import { verifyToken } from './middleware/auth.js';
+import User from './models/User.js';
+import Post from './models/Post.js';
+import { users, posts } from './data/index.js'; // dummy data
 
 
 /*  CONFIGURATIONS  */ 
@@ -58,8 +61,13 @@ const PORT = process.env.PORT || 6001; //6001 will work when the port is busy
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
-}).then(()=>{
+})
+.then(()=>{
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
-}).catch(err => console.error(`${err} did not connect`));
+    /* ADD DATA ONE TIME */
+    // User.insertMany(users);
+    // Post.insertMany(posts);
+})
+.catch(err => console.error(`${err} did not connect`));
 
 
