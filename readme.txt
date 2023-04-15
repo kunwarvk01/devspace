@@ -1,3 +1,22 @@
+Frontend {
+    react - framework
+    react router - navigation
+    formik + yup - form validation
+    redux toolkit - state management
+    redux persist - local storage
+    react dropzone - image uploads
+}
+backend{
+    nodejs - runtime environment
+    express - backend server
+    mongoose - managing database
+    jwt - authentication
+    multer - file upload
+}
+
+
+
+
 DevSpace{
     Server{
         npm i -g nodemon
@@ -85,3 +104,14 @@ DevSpace{
         }
     }
 }
+
+
+
+
+
+
+///////////////////////////////////////////////////////
+- set posts in descending order
+- friends -> connections
+- css 
+- dummy data
