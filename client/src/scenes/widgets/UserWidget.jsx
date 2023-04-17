@@ -118,6 +118,19 @@ const UserWidget = ({ userId, picturePath }) => {
           Social Profiles
         </Typography>
 
+        <FlexBetween gap="1rem"  mb="0.5rem">
+          <FlexBetween gap="1rem">
+            <img src="../assets/github.png" alt="linkedin" width='26px'/>
+            <Box>
+              <Typography color={main} fontWeight="500">
+                Github
+              </Typography>
+              <Typography color={medium}>Hosting Platform</Typography>
+            </Box>
+          </FlexBetween>
+          <EditOutlined sx={{ color: main }} />
+        </FlexBetween>
+        
         <FlexBetween gap="1rem" mb="0.5rem">
           <FlexBetween gap="1rem">
             <img src="../assets/twitter.png" alt="twitter" />
@@ -143,6 +156,7 @@ const UserWidget = ({ userId, picturePath }) => {
           </FlexBetween>
           <EditOutlined sx={{ color: main }} />
         </FlexBetween>
+
       </Box>
     </WidgetWrapper>
   );
