@@ -15,9 +15,9 @@ import postRoutes from "./routes/posts.js"; // Importing post routes
 import { register } from "./controllers/auth.js"; // Importing register controller function
 import { createPost } from "./controllers/posts.js"; // Importing createPost controller function
 import { verifyToken } from "./middleware/auth.js"; // Importing verifyToken middleware function
-import User from "./models/User.js"; // Importing User model
-import Post from "./models/Post.js"; // Importing Post model
-import { users, posts } from "./data/index.js"; // Importing sample user and post data
+// import User from "./models/User.js"; // Importing User model
+// import Post from "./models/Post.js"; // Importing Post model
+// import { users, posts } from "./data/index.js"; // Importing sample user and post data
 
 // Defining constants
 const __filename = fileURLToPath(import.meta.url); // Getting file path of current module

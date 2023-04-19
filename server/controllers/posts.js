@@ -41,7 +41,7 @@ export const createPost = async (req, res) => {
 export const getFeedPosts = async (req, res) => {
   try {
     // Retrieve all posts from the database
-    const post = await Post.find().sort({ timestamp: -1 });
+    const post = await Post.find().sort({ createdAt: -1 })
 
     // Send a response with all posts
     res.status(200).json(post);
