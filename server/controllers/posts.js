@@ -57,7 +57,7 @@ export const getUserPosts = async (req, res) => {
     const { userId } = req.params;
 
     // Retrieve all posts with the specified user id from the database
-    const post = await Post.find({ userId }).sort({ timestamp: -1 });
+    const post = await Post.find({ userId }).sort({ createdAt: -1 });
 
     // Send a response with the retrieved posts
     res.status(200).json(post);

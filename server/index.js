@@ -5,7 +5,7 @@ import mongoose from "mongoose"; // Importing Mongoose for interacting with Mong
 import cors from "cors"; // Importing cors for handling cross-origin resource sharing
 import dotenv from "dotenv"; // Importing dotenv for handling environment variables
 import multer from "multer"; // Importing multer for handling file uploads
-import helmet from "helmet"; // Importing helmet for adding security headers to responses
+// import helmet from "helmet"; // Importing helmet for adding security headers to responses
 import morgan from "morgan"; // Importing morgan for logging HTTP requests and responses
 import path from "path"; // Importing path for working with file paths
 import { fileURLToPath } from "url"; // Importing fileURLToPath for converting file URL to file path
@@ -29,8 +29,8 @@ const app = express();
 
 // Middleware setup
 app.use(express.json()); // Parsing incoming requests with JSON payloads
-app.use(helmet()); // Adding security headers to responses
-app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" })); // Configuring CORS policy
+// app.use(helmet()); // Adding security headers to responses
+// app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" })); // Configuring CORS policy
 app.use(morgan("common")); // Logging HTTP requests and responses
 app.use(bodyParser.json({ limit: "30mb", extended: true })); // Configuring JSON body parser
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true })); // Configuring URL-encoded body parser
