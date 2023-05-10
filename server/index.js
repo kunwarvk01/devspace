@@ -39,10 +39,12 @@ app.use("/assets", express.static(path.join(__dirname, "public/assets"))); // Se
 
 // Setting up file storage with multer
 const storage = multer.diskStorage({
-  destination: function (req, file, cb) { // Configuring file storage destination
+  destination: function (req, file, cb) {
+    // Configuring file storage destination
     cb(null, "public/assets");
   },
-  filename: function (req, file, cb) { // Configuring file name for storage
+  filename: function (req, file, cb) {
+    // Configuring file name for storage
     cb(null, file.originalname);
   },
 });
@@ -59,8 +61,9 @@ app.use("/posts", postRoutes); // Handling post routes with postRoutes
 
 // Setting up and starting mongoose database
 const PORT = process.env.PORT || 6001;
-mongoose.connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,  // Use new URL parser
+mongoose
+  .connect(process.env.MONGO_URL, {
+    useNewUrlParser: true, // Use new URL parser
     useUnifiedTopology: true, // Use new server discovery and monitoring engine
   })
   .then(() => {
