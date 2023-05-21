@@ -32,7 +32,9 @@ const LoginPage = () => {
             Welcome to DevSpace, the Social Media for Developers!
             <br />
             <br />
-            email: levi@gmail.com password: levi
+            email: levi@gmail.com
+            <br />
+            password: levi
           </Typography>
           <Form />
         </Box>
