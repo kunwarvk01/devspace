@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 // Define initial state
 const initialState = {
-  mode: "light",
+  mode: "dark",
   user: null,
   token: null,
   posts: [],
@@ -52,14 +52,8 @@ export const authSlice = createSlice({
 });
 
 // Export actions for use in components
-export const {
-  setMode,
-  setLogin,
-  setLogout,
-  setFriends,
-  setPosts,
-  setPost,
-} = authSlice.actions;
+export const { setMode, setLogin, setLogout, setFriends, setPosts, setPost } =
+  authSlice.actions;
 
 // Export the reducer for use in the store
 export default authSlice.reducer;
