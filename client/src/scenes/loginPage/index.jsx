@@ -29,7 +29,7 @@ const LoginPage = () => {
       >
         <Box width="50%" p="2rem">
           <Typography fontWeight="600" variant="h5" sx={{ mb: "1.75rem" }}>
-            Welcome to DevSpace, the Social Media for Developers!
+            Welcome to DevSpace, the Social Network for Developers!
             <br />
             <br />
             email: levi@gmail.com
