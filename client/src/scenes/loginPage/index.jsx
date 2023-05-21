@@ -31,6 +31,7 @@ const LoginPage = () => {
           <Typography fontWeight="600" variant="h5" sx={{ mb: "1.75rem" }}>
             Welcome to DevSpace, the Social Media for Developers!
             <br />
+            <br />
             email: levi@gmail.com password: levi
           </Typography>
           <Form />
