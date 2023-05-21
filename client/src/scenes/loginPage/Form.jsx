@@ -64,7 +64,7 @@ const Form = () => {
     formData.append("picturePath", values.picture.name);
 
     const savedUserResponse = await fetch(
-      "http://localhost:3001/auth/register",
+      "https://devspace-server.onrender.com/auth/register",
       {
         method: "POST",
         body: formData,
@@ -79,11 +79,14 @@ const Form = () => {
   };
 
   const login = async (values, onSubmitProps) => {
-    const loggedInResponse = await fetch("http://localhost:3001/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(values),
-    });
+    const loggedInResponse = await fetch(
+      "https://devspace-server.onrender.com/auth/login",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      }
+    );
     const loggedIn = await loggedInResponse.json();
     onSubmitProps.resetForm();
     if (loggedIn) {
@@ -121,7 +124,7 @@ const Form = () => {
         <form onSubmit={handleSubmit}>
           <Box
             display="grid"
-            gap= {isRegister? "5px":"20px" }
+            gap={isRegister ? "5px" : "20px"}
             gridTemplateColumns="repeat(4, minmax(0, 1fr))"
             sx={{
               "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
@@ -152,7 +155,7 @@ const Form = () => {
                   sx={{ gridColumn: "span 2" }}
                 />
                 <TextField
-                  label="Location" 
+                  label="Location"
                   onBlur={handleBlur}
                   onChange={handleChange}
                   value={values.location}
@@ -175,7 +178,6 @@ const Form = () => {
                 />
                 <Box
                   gridColumn="span 4"
-                  
                   border={`1px solid ${palette.neutral.medium}`}
                   borderRadius="5px"
                   p="1rem"
