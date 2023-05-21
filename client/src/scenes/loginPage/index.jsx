@@ -30,7 +30,8 @@ const LoginPage = () => {
         <Box width="50%" p="2rem">
           <Typography fontWeight="600" variant="h5" sx={{ mb: "1.75rem" }}>
             Welcome to DevSpace, the Social Media for Developers!
-            [email=levi@gmail.com, password=levi]
+            <br />
+            email: levi@gmail.com password: levi
           </Typography>
           <Form />
         </Box>
