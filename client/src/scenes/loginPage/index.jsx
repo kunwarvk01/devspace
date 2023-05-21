@@ -30,12 +30,18 @@ const LoginPage = () => {
         <Box width="50%" p="2rem">
           <Typography fontWeight="600" variant="h5" sx={{ mb: "1.75rem" }}>
             Welcome to DevSpace, the Social Media for Developers!
+            [email=levi@gmail.com, password=levi]
           </Typography>
           <Form />
         </Box>
-        <Box width="50%" height="100%" style={{borderTopRightRadius:"20px"}} >
+        <Box width="50%" height="100%" style={{ borderTopRightRadius: "20px" }}>
           <img
-            style={{ objectFit: "cover", width: "100%", height: "100%", borderRadius:"0  1.5rem 1.5rem 0" }}
+            style={{
+              objectFit: "cover",
+              width: "100%",
+              height: "100%",
+              borderRadius: "0  1.5rem 1.5rem 0",
+            }}
             src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
             alt=""
           />
