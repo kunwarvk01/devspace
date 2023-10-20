@@ -7,7 +7,16 @@ import User from "../models/User.js"; // Importing the User model from the model
 export const register = async (req, res) => {
   try {
     // Destructure user information from request body
-    const { firstName, lastName, email, password, picturePath, friends, location, occupation } = req.body;
+    const {
+      firstName,
+      lastName,
+      email,
+      password,
+      picturePath,
+      friends,
+      location,
+      occupation,
+    } = req.body;
 
     // Generate a salt and hash the user's password
     const salt = await bcrypt.genSalt();
